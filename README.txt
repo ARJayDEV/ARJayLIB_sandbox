@@ -10,6 +10,8 @@ examples and features from online tutorials and the bohemia docs.
 INSTALLATION
 ------------------------------------------------------
 
+grab the mission from github: https://github.com/ARJayDEV/ARJayLIB_sandbox
+
 Copy the arjay folder into your mission.
 
 Include the entire library by placing the following in your init.sqf
