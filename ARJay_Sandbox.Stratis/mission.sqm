@@ -3397,7 +3397,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=33;
+		items=31;
 		class Item0
 		{
 			position[]={1517.7347,5.5,5052.3218};
@@ -3513,108 +3513,94 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={1529.2369,5.5,5098.4321};
-			name="agentTestingMarker";
-			text="Agent Testing";
-			type="mil_flag";
-		};
-		class Item17
-		{
 			position[]={3319.8315,4.5624194,5767.6758};
 			name="markerMilitaryRange";
 			type="Empty";
 		};
-		class Item18
+		class Item17
 		{
 			position[]={4500.02,109.02869,6776.0396};
 			name="markerKillFarm";
 			type="Empty";
 		};
-		class Item19
+		class Item18
 		{
 			position[]={5025.6382,207.95906,5858.5439};
 			name="markerCampRogain";
 			type="Empty";
 		};
-		class Item20
+		class Item19
 		{
 			position[]={6419.8823,25.161184,5238.417};
 			name="markerKaminoFiringRange";
 			type="Empty";
 		};
-		class Item21
+		class Item20
 		{
 			position[]={5237.8198,218.85733,5068.9648};
 			name="markerTransmitter";
 			type="Empty";
 		};
-		class Item22
+		class Item21
 		{
 			position[]={4406.0259,192.40065,4406.2881};
 			name="markerOldOutpost";
 			type="Empty";
 		};
-		class Item23
+		class Item22
 		{
 			position[]={4303.8345,213.955,3734.3486};
 			name="markerAirStationMike";
 			type="Empty";
 		};
-		class Item24
+		class Item23
 		{
 			position[]={4259.2095,16.207317,2743.3726};
 			name="markerTsoukalia";
 			type="Empty";
 		};
-		class Item25
+		class Item24
 		{
 			position[]={3347.6208,225.3073,2973.0244};
 			name="markerCampMaxwell";
 			type="Empty";
 		};
-		class Item26
+		class Item25
 		{
 			position[]={2575.0972,94.961121,3499.1123};
 			name="markerAgiosIoannis";
 			type="Empty";
 			angle=20.031017;
 		};
-		class Item27
+		class Item26
 		{
 			position[]={3017.7024,166.25873,1920.5493};
 			name="markerLZConnor";
 			type="Empty";
 		};
-		class Item28
+		class Item27
 		{
 			position[]={2789.5266,148.12057,1795.7056};
 			name="markerAgiosCephas";
 			type="Empty";
 		};
-		class Item29
+		class Item28
 		{
 			position[]={2445.0254,2.9739833,1147.3306};
 			name="markerJayCove";
 			type="Empty";
 		};
-		class Item30
+		class Item29
 		{
 			position[]={2012.5007,4.1753325,2696.2817};
 			name="markerGirna";
 			type="Empty";
 		};
-		class Item31
+		class Item30
 		{
 			position[]={1961.0867,4.7275257,3585.7759};
 			name="markerCampTempest";
 			type="Empty";
-		};
-		class Item32
-		{
-			position[]={2469.6765,22.329626,3684.8945};
-			name="agentLocalTesting";
-			text="Agent Local Testing";
-			type="mil_flag";
 		};
 	};
 	class Sensors
