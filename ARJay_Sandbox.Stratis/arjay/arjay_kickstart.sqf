@@ -9,6 +9,3 @@ call compile preprocessFileLineNumbers "arjay\arjay_environment.sqf";
 call compile preprocessFileLineNumbers "arjay\arjay_modify.sqf";
 call compile preprocessFileLineNumbers "arjay\arjay_spawn.sqf";
 call compile preprocessFileLineNumbers "arjay\arjay_position.sqf";
-
-// Kronzky's string functions - awesome!
-//call compile preprocessFileLineNumbers "functions\string\KRON_Strings.sqf";
