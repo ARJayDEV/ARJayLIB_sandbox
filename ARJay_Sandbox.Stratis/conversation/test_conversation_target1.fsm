@@ -1,0 +1,319 @@
+/*%FSM<COMPILE "C:\Program Files\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, test">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"React",0,250,-200.000000,-175.000000,-100.000000,-125.000000,0.000000,"React"};
+item1[] = {"",7,210,-154.000000,-79.000000,-146.000000,-71.000000,0.000000,""};
+item2[] = {"Interupted",4,218,-350.000000,-25.000000,-250.000000,25.000000,0.000000,"Interupted"};
+item3[] = {"invalid_ID",8,218,-350.000000,-100.000000,-250.000000,-50.000000,-1.000000,"invalid ID"};
+item4[] = {"terminate",1,250,-475.000000,-100.000000,-375.000000,-50.000000,0.000000,"terminate"};
+item5[] = {"leave",4,218,-350.000000,50.000000,-250.000000,100.000000,0.000000,"leave"};
+item6[] = {"approach",4,218,-50.000000,-100.000000,50.000000,-50.000000,0.000000,"approach"};
+item7[] = {"greeting_1",4,218,-50.000000,-25.000000,50.000000,25.000000,0.000000,"greeting 1"};
+item8[] = {"greeting_2",4,218,-50.000000,50.000000,50.000000,100.000000,0.000000,"greeting 2"};
+item9[] = {"menu_closed",1,250,-475.000000,-25.000000,-375.000000,25.000000,0.000000,"menu closed"};
+item10[] = {"terminate_1",1,250,-475.000000,50.000000,-375.000000,100.000000,0.000000,"terminate"};
+item11[] = {"greeting",1,250,75.000000,-100.000000,250.000000,-50.000000,0.000000,"greeting"};
+item12[] = {"greeting_response",1,250,75.000000,-25.000000,250.000000,25.000000,0.000000,"greeting response 1"};
+item13[] = {"greeting_response_1",1,250,75.000000,50.000000,250.000000,100.000000,0.000000,"greeting response 2"};
+item14[] = {"response1",4,218,-50.000000,125.000000,50.000000,175.000000,0.000000,"response1"};
+item15[] = {"response_1",1,250,75.000000,125.000000,250.000000,175.000000,0.000000,"response 1"};
+item16[] = {"response2",4,218,-50.000000,200.000000,50.000000,250.000000,0.000000,"response2"};
+item17[] = {"response_2",1,250,75.000000,200.000000,250.000000,250.000000,0.000000,"response 2"};
+item18[] = {"response3",4,218,-50.000000,275.000000,50.000000,325.000000,0.000000,"response3"};
+item19[] = {"response_3",1,250,75.000000,275.000000,250.000000,325.000000,0.000000,"response 3"};
+item20[] = {"goodbye",4,218,-50.000000,350.000000,50.000000,400.000000,0.000000,"goodbye"};
+item21[] = {"goodbye",1,250,75.000000,350.000000,250.000000,400.000000,0.000000,"goodbye"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {1,3};
+link3[] = {1,5};
+link4[] = {1,6};
+link5[] = {1,7};
+link6[] = {1,8};
+link7[] = {1,14};
+link8[] = {1,16};
+link9[] = {1,18};
+link10[] = {1,20};
+link11[] = {2,9};
+link12[] = {3,4};
+link13[] = {5,10};
+link14[] = {6,11};
+link15[] = {7,12};
+link16[] = {8,13};
+link17[] = {14,15};
+link18[] = {16,17};
+link19[] = {18,19};
+link20[] = {20,21};
+globals[] = {25.000000,1,0,0,0,640,480,2,56,6316128,1,-562.652222,277.954620,462.143188,-398.707581,872,1031,1};
+window[] = {2,-1,-1,-1,-1,861,-1795,-773,125,3,890};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "test";
+  class States
+  {
+    /*%FSM<STATE "React">*/
+    class React
+    {
+      name = "React";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "greeting_2">*/
+        class greeting_2
+        {
+          priority = 0.000000;
+          to="greeting_response_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_sentenceId == ""player_greeting2"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Interupted">*/
+        class Interupted
+        {
+          priority = 0.000000;
+          to="menu_closed";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_sentenceId == ""Interrupted"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "leave">*/
+        class leave
+        {
+          priority = 0.000000;
+          to="terminate_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_sentenceId == ""player_leave"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "approach">*/
+        class approach
+        {
+          priority = 0.000000;
+          to="greeting";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_sentenceId == ""player_approach"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "greeting_1">*/
+        class greeting_1
+        {
+          priority = 0.000000;
+          to="greeting_response";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_sentenceId == ""player_greeting1"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "response1">*/
+        class response1
+        {
+          priority = 0.000000;
+          to="response_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_sentenceId == ""player_response1"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "response2">*/
+        class response2
+        {
+          priority = 0.000000;
+          to="response_2";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_sentenceId == ""player_response2"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "response3">*/
+        class response3
+        {
+          priority = 0.000000;
+          to="response_3";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_sentenceId == ""player_response3"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "goodbye">*/
+        class goodbye
+        {
+          priority = 0.000000;
+          to="goodbye";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_sentenceId == ""player_goodbye"""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "invalid_ID">*/
+        class invalid_ID
+        {
+          priority = -1.000000;
+          to="terminate";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "terminate">*/
+    class terminate
+    {
+      name = "terminate";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "menu_closed">*/
+    class menu_closed
+    {
+      name = "menu_closed";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "terminate_1">*/
+    class terminate_1
+    {
+      name = "terminate_1";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "greeting">*/
+    class greeting
+    {
+      name = "greeting";
+      init = /*%FSM<STATEINIT""">*/"[_this, _from, _topic] spawn {" \n
+       "	sleep 2;" \n
+       "	 _this select 0 kbTell [_this select 1, _this select 2, ""target_greeting""];" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "greeting_response">*/
+    class greeting_response
+    {
+      name = "greeting_response";
+      init = /*%FSM<STATEINIT""">*/"[_this, _from, _topic] spawn {" \n
+       "	sleep 2;" \n
+       "	 _this select 0 kbTell [_this select 1, _this select 2, ""target_greeting1_response""];" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "greeting_response_1">*/
+    class greeting_response_1
+    {
+      name = "greeting_response_1";
+      init = /*%FSM<STATEINIT""">*/"[_this, _from, _topic] spawn {" \n
+       "	sleep 2;" \n
+       "	 _this select 0 kbTell [_this select 1, _this select 2, ""target_greeting2_response""];" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "response_1">*/
+    class response_1
+    {
+      name = "response_1";
+      init = /*%FSM<STATEINIT""">*/"[_this, _from, _topic] spawn {" \n
+       "	sleep 2;" \n
+       "	 _this select 0 kbTell [_this select 1, _this select 2, ""target_response1""];" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "response_2">*/
+    class response_2
+    {
+      name = "response_2";
+      init = /*%FSM<STATEINIT""">*/"[_this, _from, _topic] spawn {" \n
+       "	sleep 2;" \n
+       "	 _this select 0 kbTell [_this select 1, _this select 2, ""target_response2""];" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "response_3">*/
+    class response_3
+    {
+      name = "response_3";
+      init = /*%FSM<STATEINIT""">*/"[_this, _from, _topic] spawn {" \n
+       "	sleep 2;" \n
+       "	 _this select 0 kbTell [_this select 1, _this select 2, ""target_response3""];" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "goodbye">*/
+    class goodbye
+    {
+      name = "goodbye";
+      init = /*%FSM<STATEINIT""">*/"[_this, _from, _topic] spawn {" \n
+       "	sleep 2;" \n
+       "	 _this select 0 kbTell [_this select 1, _this select 2, ""target_goodbye""];" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="React";
+  finalStates[] =
+  {
+    "terminate",
+    "menu_closed",
+    "terminate_1",
+    "greeting",
+    "greeting_response",
+    "greeting_response_1",
+    "response_1",
+    "response_2",
+    "response_3",
+    "goodbye",
+  };
+};
+/*%FSM</COMPILE>*/

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ARJay">
+	<Package name="TestStringtable">
+		<Key ID="STR_TEST">
+			<English>TEST STRING FROM STRING TABLE!</English>
+		</Key>
+	</Package>
+	<Package name="TestConversation">
+		<Key ID="STR_T_C_INTRO">
+			<English>Looks at you warily</English>
+		</Key>
+		<Key ID="STR_T_C_PLAYER_APPROACH">
+			<English>Approach</English>
+		</Key>
+		<Key ID="STR_T_C_PLAYER_LEAVE">
+			<English>Leave</English>
+		</Key>
+		<Key ID="STR_T_C_TARGET_GREETING">
+			<English>Howdy partner</English>
+		</Key>
+		<Key ID="STR_T_C_PLAYER_GREETING1">
+			<English>Hello</English>
+		</Key>
+		<Key ID="STR_T_C_PLAYER_GREETING2">
+			<English>Hey arsehole..</English>
+		</Key>
+		<Key ID="STR_T_C_TARGET_RESPONSE1">
+			<English>How's Stratis treating you today stranger?</English>
+		</Key>
+		<Key ID="STR_T_C_TARGET_RESPONSE2">
+			<English>Go fuck yourself..</English>
+		</Key>
+		<Key ID="STR_T_C_PLAYER_RESPONSE1">
+			<English>The suns still shining..</English>
+		</Key>
+		<Key ID="STR_T_C_PLAYER_RESPONSE2">
+			<English>Shit is complex</English>
+		</Key>
+		<Key ID="STR_T_C_PLAYER_RESPONSE3">
+			<English>Blowing stuff up is always good</English>
+		</Key>
+		<Key ID="STR_T_C_TARGET_RESPONSE3">
+			<English>And the babes are smiling</English>
+		</Key>
+		<Key ID="STR_T_C_TARGET_RESPONSE4">
+			<English>Complexity can be made simple with small progressive steps</English>
+		</Key>
+		<Key ID="STR_T_C_TARGET_RESPONSE5">
+			<English>Amen to that</English>
+		</Key>
+		<Key ID="STR_T_C_PLAYER_GOODBYE">
+			<English>Later buddy</English>
+		</Key>
+		<Key ID="STR_T_C_TARGET_GOODBYE">
+			<English>Take it easy</English>
+		</Key>
+	</Package>
+	<Package name="Briefing">
+		<Key ID="STR_B_WELCOME_TITLE">
+			<English>Welcome</English>
+		</Key>
+		<Key ID="STR_B_WELCOME_CONTENT">
+			<English>%3ARJay sanbox%2%1A mission for ARMA 3 alpha testing editing and scripting.%1Consists of libraries of wrapper methods to familiarise myself with ARMA scripting and editing options.%1I have compiled examples and features from online tutorials and the bohemia docs.</English>
+		</Key>
+		<Key ID="STR_B_OUTLINE_TITLE">
+			<English>Outline</English>
+		</Key>
+		<Key ID="STR_B_OUTLINE_CONTENT">
+			<English>Test ARJay cinmatic camera library functions %3HERE%2%1Test ARJay switch and chase camera library functions %4HERE%2 and %5HERE%2%1Test ARJay gear and loadout library functions %6HERE%2%1Test BIS debugging utilities %7HERE%2%1Test ARJay debugging library functions %8HERE%2%1Test ARJay announce and UI library functions %9HERE%2%1Test ARJay task library functions %10HERE%2%1Test ARJay marker library functions %11HERE%2%1Test BIS conversation functions %12HERE%2%1Test ARJay live feed library functions %13HERE%2%1Test ARJay effects library functions %14HERE%2%1Test ARJay environment library functions %15HERE%2%1Test ARJay object spawning library functions %16HERE%2%1</English>
+		</Key>
+		<Key ID="STR_B_THANKS_TITLE">
+			<English>With Thanks</English>
+		</Key>
+		<Key ID="STR_B_THANKS_CONTENT">
+			<English>To the awesome community, who have already answered most of my questions at some point in the long history of arma modding and scripting.%1In particular to:%1armaholic staff for curating a heap of content and posts%1bi forum staff for the same%1kylania for some great more advanced code snippets and forum responses%1zemek kondor for the marker tracking script%1Tonic for the ammo box filler%1Sickboy for his class reference browser%1And to BI who have made an open and exciting world allowing creativity and mayhem!</English>
+		</Key>
+		<Key ID="STR_B_CREDITS_TITLE">
+			<English>Credits</English>
+		</Key>
+		<Key ID="STR_B_CREDITS_CONTENT">
+			<English>Created by ARJay for ArmA 3 Alpha%1Last Updated 2013-03-20</English>
+		</Key>
+	</Package>
+</Project>

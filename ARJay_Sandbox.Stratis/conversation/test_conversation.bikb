@@ -1,0 +1,140 @@
+class Sentences
+{
+
+	class introduction
+	{
+		text = "$STR_T_C_INTRO";
+		speech[] = {""};
+		class Arguments {};		
+	};
+	
+	class player_approach
+	{
+		text = "";
+		speech[] = {""};
+		class Arguments {};		
+	};
+	
+	class player_leave
+	{
+		text = "";
+		speech[] = {""};
+		class Arguments {};		
+	};
+	
+	class target_greeting
+	{
+		text = "$STR_T_C_TARGET_GREETING";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+
+	class player_greeting1
+	{
+		text = "$STR_T_C_PLAYER_GREETING1";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class player_greeting2
+	{
+		text = "$STR_T_C_PLAYER_GREETING2";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+
+	class target_greeting1_response
+	{
+		text = "$STR_T_C_TARGET_RESPONSE1";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class target_greeting2_response
+	{
+		text = "$STR_T_C_TARGET_RESPONSE2";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class player_response1
+	{
+		text = "$STR_T_C_PLAYER_RESPONSE1";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class player_response2
+	{
+		text = "$STR_T_C_PLAYER_RESPONSE2";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class player_response3
+	{
+		text = "$STR_T_C_PLAYER_RESPONSE3";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class target_response1
+	{
+		text = "$STR_T_C_TARGET_RESPONSE3";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class target_response2
+	{
+		text = "$STR_T_C_TARGET_RESPONSE4";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class target_response3
+	{
+		text = "$STR_T_C_TARGET_RESPONSE5";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class player_goodbye
+	{
+		text = "$STR_T_C_PLAYER_GOODBYE";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class target_goodbye
+	{
+		text = "$STR_T_C_TARGET_GOODBYE";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+	
+	class Interrupted
+	{
+		text = "";
+		speech[] = {""};
+		class Arguments {};
+		
+	};
+};
+class Arguments{};
+class Special{};
+startWithVocal[] = {};
+startWithConsonant[] = {};
