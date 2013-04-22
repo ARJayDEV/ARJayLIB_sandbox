@@ -253,6 +253,27 @@ arjay_createVehicle =
 };
 
 /*
+	Creates a Weapon at a position
+*/
+arjay_createWeapon = 
+{	
+	private ["_position", "_direction", "_weaponClass", "_ammoClass", "_ammoCount", "_weapon"];
+	
+	_position = _this select 0;
+	_direction = _this select 1;
+	_weaponClass = _this select 2;
+	_ammoClass = _this select 3;	
+	_ammoCount = if(count _this > 4) then {_this select 4} else {2};
+	
+	_weapon = "groundWeaponHolder" createVehicle _position;
+	_weapon addWeaponCargo [_weaponClass,1];
+	_weapon addMagazineCargo [_ammoClass, _ammoCount];
+	//_position set [2,0.78];
+	_weapon setPos _position;
+	_weapon setDir _direction;
+};
+
+/*
 	Sets a target objects 3D orientation to point at a target object
 */
 arjay_pointAt = 

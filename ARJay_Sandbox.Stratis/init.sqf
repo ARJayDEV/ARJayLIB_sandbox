@@ -28,6 +28,57 @@ if(arjay_debug) then
 
 // EXAMPLE MISSION SETTINGS -------------------------------------------------------------------------------------------
 
+// task callbacks
+
+// Move to marker call back
+moveToMarker1Callback = 
+{
+	private ["_player"];
+	
+	_player = _this select 0;
+	
+	[format["Player %1, has completed task %2", _player]] call arjay_dump;
+};
+
+// Eliminate target calls back to this function once task has been completed
+eliminateTarget1Callback = 
+{
+	private ["_player"];
+	
+	_player = _this select 0;
+	
+	[format["Player %1, has completed task %2", _player]] call arjay_dump;
+};
+
+// Eliminate target calls back to this function once task has been completed
+eliminateTarget2Callback = 
+{
+	private ["_player"];
+	
+	_player = _this select 0;
+	
+	[format["Player %1, has completed task %2", _player]] call arjay_dump;
+};
+
+// Eliminate group calls back to this function once task has been completed
+eliminateGroup1Callback = 
+{
+	private ["_player"];
+	
+	_player = _this select 0;
+	
+	[format["Player %1, has completed task %2", _player]] call arjay_dump;
+};
+
+// Require item calls back to this function once task has been completed
+requireItem1Callback = 
+{
+	private ["_player"];
+	
+	_player = _this select 0;
+	
+	[format["Player %1, has completed task", _player]] call arjay_dump;
+};
 
 // target practice
 

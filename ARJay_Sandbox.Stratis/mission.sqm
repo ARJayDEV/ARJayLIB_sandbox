@@ -987,7 +987,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=201;
+		items=202;
 		class Item0
 		{
 			position[]={1517.938,5.5,4970.3184};
@@ -3394,10 +3394,22 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 		};
+		class Item201
+		{
+			position[]={1514.6414,5.5,5035.0752};
+			azimut=376.39001;
+			special="NONE";
+			id=248;
+			side="EMPTY";
+			vehicle="Sign_Sphere100cm_F";
+			leader=1;
+			lock="UNLOCKED";
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
-		items=31;
+		items=32;
 		class Item0
 		{
 			position[]={1517.7347,5.5,5052.3218};
@@ -3602,10 +3614,16 @@ class Mission
 			name="markerCampTempest";
 			type="Empty";
 		};
+		class Item31
+		{
+			position[]={1505.0378,5.5,5037.0718};
+			name="task1TestingMarker";
+			type="Empty";
+		};
 	};
 	class Sensors
 	{
-		items=132;
+		items=133;
 		class Item0
 		{
 			position[]={1513.0188,5.5,5029.229};
@@ -4330,7 +4348,7 @@ class Mission
 			age="UNKNOWN";
 			text="Task Test 5";
 			name="TaskTest5";
-			expActiv="myTask = [player,taskTarget1,""Kill The Civillian"",""Kill The Civillian""] call arjay_eliminateTarget;";
+			expActiv="myTask = [player,taskTarget1,""Kill The Civillian"",""Kill The Civillian"",""eliminateTarget1Callback""] call arjay_eliminateTargetTask;";
 			class Effects
 			{
 				titleType="TEXT";
@@ -5592,7 +5610,7 @@ class Mission
 			age="UNKNOWN";
 			text="Task Test 6";
 			name="TaskTest6";
-			expActiv="myTask = [player,taskGroup1,""Kill All The Civillians"",""Kill All The Civillians""] call arjay_eliminateGroup;";
+			expActiv="myTask = [player,taskGroup1,""Kill All The Civillians"",""Kill All The Civillians"",""eliminateGroup1Callback""] call arjay_eliminateGroupTask;";
 			class Effects
 			{
 				titleType="TEXT";
@@ -5610,7 +5628,7 @@ class Mission
 			age="UNKNOWN";
 			text="Task Test 7";
 			name="TaskTest7";
-			expActiv="myTask = [player,taskItems,""launch_NLAW_F"",""Grab the NLAW"",""Grab the RPG""] call arjay_requireItem;";
+			expActiv="myTask = [player,taskItems,""launch_NLAW_F"",""Grab the NLAW"",""Grab the RPG"",""requireItem1Callback""] call arjay_requireItemTask;";
 			class Effects
 			{
 				titleType="TEXT";
@@ -5628,7 +5646,7 @@ class Mission
 			age="UNKNOWN";
 			text="Task Test 8";
 			name="TaskTest8";
-			expActiv="myTask = [player,taskTarget5,""Destroy the vehicle"",""Destroy the vehicle""] call arjay_eliminateTarget;";
+			expActiv="myTask = [player,taskTarget5,""Destroy the vehicle"",""Destroy the vehicle"",""eliminateTarget2Callback""] call arjay_eliminateTargetTask;";
 			class Effects
 			{
 				titleType="TEXT";
@@ -6051,6 +6069,24 @@ class Mission
 			{
 				titleType="TEXT";
 				title="Util Testing - Enable developer map teleport on click and show info on targeted object";
+			};
+		};
+		class Item132
+		{
+			position[]={1514.6168,5.5,5035.0869};
+			a=0.5;
+			b=0.5;
+			angle=-7.1729698;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			text="Task Test 4";
+			name="TaskTest4";
+			expActiv="myTask = [player,""task1TestingMarker"",""Move Here"",""Move to this location"",""moveToMarker1Callback""] call arjay_moveToTask;";
+			class Effects
+			{
+				titleType="TEXT";
+				title="Task Test - Create task to kill civilian";
 			};
 		};
 	};
