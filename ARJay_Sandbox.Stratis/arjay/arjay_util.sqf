@@ -10,8 +10,7 @@ arjay_isPositionDumpTracking = false;
 arjay_positionDumpTrackingTick = 5;
 arjay_isInspectTracking = false;
 arjay_inspectDumpTrackingTick = 5;
-arjay_isDumpTiming = false;
-arjay_currentDumpTimer = 0;
+arjay_startTimer = 0;
 
 /*
 	Show instance name of object under cursor
@@ -67,32 +66,24 @@ arjay_timerStart =
 	private ["_text"];
 	
 	_text = _this select 0;
-	arjay_isDumpTiming = true;
-	arjay_currentDumpTimer = 0;
+	arjay_startTimer = diag_tickTime;	
 	
-	[] spawn
-	{
-		while{arjay_isDumpTiming} do
-		{
-			arjay_currentDumpTimer = arjay_currentDumpTimer + 1;
-		};
-	};
 	
 	[format["%1 [TIMER STARTED]",_text]] call arjay_dump;	
 };
 
 /*
-	End timer
+	Stop timer
 */
-arjay_timerEnd = 
+arjay_timerStop = 
 {
-	private ["_text"];
+	private ["_text", "_endTimer"];
 	
-	arjay_isDumpTiming = false;
+	_endTimer = diag_tickTime - arjay_startTimer;
 	
 	_text = _this select 0;
 	
-	[format["%1 [TIMER ENDED : %2]",_text,arjay_currentDumpTimer]] call arjay_dump;	
+	[format["%1 [TIMER ENDED : %2]",_text,_endTimer]] call arjay_dump;	
 };
 
 /*
@@ -267,7 +258,7 @@ arjay_inspect =
 	_text = format[" can move: %1", canMove _target];
 	[_text] call arjay_dumpOutput;
 	
-	text = format[" able to breathe: %1", isAbleToBreathe _target];
+	_text = format[" able to breathe: %1", isAbleToBreathe _target];
 	[_text] call arjay_dumpOutput;
 	
 	_text = format[" on road: %1", isOnRoad getPos _target];
@@ -293,7 +284,7 @@ arjay_inspect =
 	[_text] call arjay_dumpOutput;
 	*/
 	
-	text = format[" is burning: %1", isBurning _target];
+	_text = format[" is burning: %1", isBurning _target];
 	[_text] call arjay_dumpOutput;
 	
 	/* NOT IN ALPHA?
@@ -301,7 +292,7 @@ arjay_inspect =
 	[_text] call arjay_dumpOutput;
 	*/
 	
-	text = format[" bleeding: %1", isBleeding _target];
+	_text = format[" bleeding: %1", isBleeding _target];
 	[_text] call arjay_dumpOutput;
 	
 	_text = format[" bleeding remaining: %1", getBleedingRemaining _target];

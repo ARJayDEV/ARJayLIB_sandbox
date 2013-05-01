@@ -110,7 +110,7 @@ arjay_getSideOfRoadPosition =
 		
 	if(count _roads > 1) then		
 	{
-		_road = getPos (_roads call BIS_fnc_selectRandom);
+		_road = getPos (_roads select (random((count _roads)-1)));
 		_position = [(_road select 0) + 6, _road select 1, _road select 2];
 	}
 	else

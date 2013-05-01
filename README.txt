@@ -130,11 +130,17 @@ Post processing and other effects
 arjay/arjay_environment.sqf
 Date and time presets
 
+arjay/arjay_garbage_collection.sqf
+Garbage collection on objects based on distance from player/s
+
 arjay/arjay_gear.sqf
 Loadout presets and crate filler
 
 arjay/arjay_marker.sqf
 Marker creation and marker target tracking
+
+arjay/arjay_monitor.sqf
+Main arjay loop, in this case used for garbage collection
 
 arjay/arjay_modify.sqf
 Object modification

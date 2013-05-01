@@ -13,11 +13,15 @@ arjay_magazineLimit = 2;
 */
 arjay_setLoadout = 
 {
-	private ["_target", "_preset"];
+	private ["_target", "_preset", "_strip"];
 	_target = _this select 0;
 	_preset = _this select 1;
+	_strip = if(count _this > 2) then {_this select 2} else {true};
 	
+	if(_strip) then
+	{
 	[_target] call arjay_stripLoadout;	
+	};
 	[_target, _preset] call arjay_setUniformLoadout;
 	[_target, _preset] call arjay_setPackLoadout;
 	[_target, _preset] call arjay_setWeaponLoadout;	
@@ -210,6 +214,13 @@ arjay_setWeaponLoadout =
 			[_target,_primaryAccessories] call arjay_addPrimaryItems;
 			_handgunAccessories = ["muzzle_snds_L"];
 			[_target,_handgunAccessories] call arjay_addHandgunItems;
+		};
+		case "ROGUE1":
+		{
+			_magazines = ["16Rnd_9x21_Mag"];
+			[_target,_magazines] call arjay_addMagazines;
+			_weapons = ["hgun_Rook40_F"];
+			[_target,_weapons] call arjay_addWeapons;
 		};
 		default
 		{
@@ -662,7 +673,7 @@ arjay_addMagazines =
 	{
 		for "_i" from 0 to arjay_magazineLimit-1 do
 		{
-			_target addMagazine _x
+			_target addMagazine _x;
 		};
 	} forEach _items;
 };
@@ -726,6 +737,19 @@ arjay_stripLoadout =
 	removeAllContainers _target;
 	removeGoggles _target;
 	removeHeadgear _target;
+};
+/*
+	Is a unit armed
+*/
+arjay_isArmed = 
+{
+	private ["_target", "_found"];
+	_target = _this select 0;
+	_found = false;
+	if !(primaryWeapon _target == "" &&  secondaryWeapon _target == "" && handgunWeapon _target == "") then {
+		_found = true;
+	};
+	_found
 };
 
 /*

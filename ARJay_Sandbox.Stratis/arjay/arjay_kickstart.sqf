@@ -9,3 +9,5 @@ call compile preprocessFileLineNumbers "arjay\arjay_environment.sqf";
 call compile preprocessFileLineNumbers "arjay\arjay_modify.sqf";
 call compile preprocessFileLineNumbers "arjay\arjay_spawn.sqf";
 call compile preprocessFileLineNumbers "arjay\arjay_position.sqf";
+call compile preprocessFileLineNumbers "arjay\arjay_monitor.sqf";
+call compile preprocessFileLineNumbers "arjay\arjay_garbage_collection.sqf";

@@ -5,6 +5,48 @@
 	props ruebe for sunrise / sunset calculations for given day!
 */
 
+arjay_currentDate = "";
+arjay_sunriseSunset = [];
+arjay_currentEnvironment = [];
+/*
+	Get current environment settings
+*/
+arjay_getEnvironment =
+{
+	private ["_date", "_dateString", "_hour", "_minute", "_sunSet", "_sunRise", "_dayState"];
+	_date = date;
+	_dateString = format["%1-%2-%3", _date select 0, _date select 1, _date select 2];
+	// sunrise sunset is already set
+	if(count arjay_sunriseSunset > 0) then
+	{
+		// date has changed reset
+		if(arjay_currentDate != _dateString) then
+		{
+			arjay_sunriseSunset = [_date select 0, _date select 1, _date select 2] call arjay_getSunriseSunset;
+		};
+	}
+	else
+	{
+		arjay_sunriseSunset = [_date select 0, _date select 1, _date select 2] call arjay_getSunriseSunset;
+	};
+	arjay_currentDate = _dateString;
+	_hour = _date select 3;
+	_minute = _date select 4;
+	_sunSet = arjay_sunriseSunset select 1;
+	_sunSet = _sunSet select 0;
+	_sunRise = arjay_sunriseSunset select 0;
+	_sunRise = _sunRise select 0;
+	_dayState = "DAY";
+	if(_hour <= _sunRise) then
+	{
+		_dayState = "NIGHT";
+	};
+	if(_hour > _sunSet) then
+	{
+		_dayState = "EVENING";
+	};
+	arjay_currentEnvironment = [_dayState, _hour, _minute];
+};
 /*
 	Set environment preset
 	preset:

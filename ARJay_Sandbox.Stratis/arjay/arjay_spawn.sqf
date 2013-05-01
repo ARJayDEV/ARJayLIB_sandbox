@@ -40,11 +40,7 @@ arjay_respawn =
 		_target setPosASL _position;
 		_target setDir _dir;
 		
-		if (!isNil _name) then
-		{
-			_target setVehicleInit format ["%1 = this; this setVehicleVarName ""%1""",_name];
-			processInitCommands;
-		};
+		_target setVehicleVarName _name;
 	};
 };	
 
